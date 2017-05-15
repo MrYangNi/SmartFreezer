@@ -26,6 +26,22 @@ public class UserInfo {
 
     private Boolean status;
 
+    public UserInfo() {
+    }
+
+    public UserInfo(Long userId, String username, String password, String salt, String name, Integer gender, Long birthday, String phone, String email, Boolean status) {
+        this.userId = userId;
+        this.username = username;
+        this.password = password;
+        this.salt = salt;
+        this.name = name;
+        this.gender = gender;
+        this.birthday = birthday;
+        this.phone = phone;
+        this.email = email;
+        this.status = status;
+    }
+
     public Long getUserId() {
         return userId;
     }

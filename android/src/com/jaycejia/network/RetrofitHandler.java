@@ -24,7 +24,7 @@ import rx.schedulers.Schedulers;
 public class RetrofitHandler {
     private static Retrofit retrofit = null;
     private static Map<Class<?>, Object> serviceCache = new HashMap<>();
-    private static String baseUrl = "http://120.24.246.150:8080/server/";
+    private static String baseUrl = "https://www.jaycejia.com/smart-fridge/";
 
     static {
         ObjectMapper objectMapper = new ObjectMapper();
@@ -42,7 +42,7 @@ public class RetrofitHandler {
         public Observable<T> call(Observable<T> tObservable) {
             return tObservable.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
         }
-    }
+}
 
     public static <T> T getService(final Class<T> service) {
         T result = (T) serviceCache.get(service);

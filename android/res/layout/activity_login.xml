@@ -114,6 +114,7 @@
                     android:maxLines="1"
                     android:textColor="@color/black"
                     android:textSize="17sp"
+                    android:password="true"
                     android:background="@null"/>
             </RelativeLayout>
 
